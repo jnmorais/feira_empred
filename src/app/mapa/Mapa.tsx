@@ -23,12 +23,12 @@ export default function Mapa() {
       <svg className="mapa" viewBox="0 0 100 100" role="img" aria-label="Planta do pátio com as bancas da feira">
         <defs>
           <pattern id="grade" width="5" height="5" patternUnits="userSpaceOnUse">
-            <path d="M 5 0 L 0 0 0 5" fill="none" stroke="#eef0f3" strokeWidth="0.3" />
+            <path className="mapa-grade" d="M 5 0 L 0 0 0 5" fill="none" strokeWidth="0.3" />
           </pattern>
         </defs>
-        <rect x="3" y="3" width="94" height="94" rx="1.5" fill="url(#grade)" stroke="#cfd4dc" strokeWidth="0.4" />
-        <rect x="8" y="44" width="84" height="12" rx="1" fill="#f6f7f9" stroke="#e3e6eb" strokeWidth="0.3" />
-        <text x="50" y="51" textAnchor="middle" fontSize="2.6" fill="#8a93a1" letterSpacing="0.3">
+        <rect className="mapa-contorno" x="3" y="3" width="94" height="94" rx="1.5" strokeWidth="0.4" />
+        <rect className="mapa-corredor" x="8" y="44" width="84" height="12" rx="1" strokeWidth="0.3" />
+        <text className="mapa-rotulo" x="50" y="51" textAnchor="middle" fontSize="2.6" letterSpacing="0.3">
           CIRCULAÇÃO · ÁREA DE CONVIVÊNCIA
         </text>
 
@@ -63,8 +63,8 @@ export default function Mapa() {
 
         {pontosDoMapa.map((p) => (
           <g key={p.id}>
-            <rect x={p.x - L / 2} y={p.y - A / 2} width={L} height={A} rx="1" fill="#fff" stroke="#8a93a1" strokeWidth="0.35" strokeDasharray="1.2 0.8" />
-            <text x={p.x} y={p.y + 1} textAnchor="middle" fontSize="2.3" fill="#374151" fontWeight="600">
+            <rect x={p.x - L / 2} y={p.y - A / 2} width={L} height={A} rx="1" className="mapa-ponto" strokeWidth="0.35" strokeDasharray="1.2 0.8" />
+            <text x={p.x} y={p.y + 1} className="mapa-ponto-texto" textAnchor="middle" fontSize="2.3" fontWeight="600">
               {p.nome.length > 16 ? p.nome.slice(0, 15) + "…" : p.nome}
             </text>
           </g>

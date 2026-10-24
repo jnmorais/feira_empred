@@ -96,7 +96,7 @@ export default function Feira() {
             <h3>Precisa de ajuda?</h3>
             <p className="pequeno suave" style={{ margin: 0 }}>
               O pessoal de SI e Engenharia de Software fica no ponto <strong>Suporte TI</strong>{" "}
-              (está no mapa). No topo da página dá para aumentar o texto e ativar o alto contraste.
+              (está no mapa). E se preferir, dá para ativar o tema escuro no topo da página.
             </p>
           </div>
         </div>

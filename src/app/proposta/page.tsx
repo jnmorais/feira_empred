@@ -65,7 +65,7 @@ export default function Proposta() {
                 <Link href="/qrcodes">Folha de QR Codes</Link> pronta para imprimir (entrada, mesas e uma placa
                 por banca);
               </li>
-              <li>Acessibilidade: texto maior, alto contraste, navegação por teclado e leitores de tela.</li>
+              <li>Tema claro/escuro (segue o celular do visitante), navegação por teclado e compatibilidade com leitores de tela.</li>
             </ul>
           </dd>
 

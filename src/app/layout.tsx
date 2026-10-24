@@ -3,6 +3,7 @@ import { Geist } from "next/font/google";
 import Link from "next/link";
 import Topo from "@/components/Topo";
 import { equipe } from "@/lib/config";
+import { scriptTema } from "@/lib/tema";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,7 +26,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-BR" className={geistSans.variable}>
+    <html lang="pt-BR" className={geistSans.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: scriptTema }} />
+      </head>
       <body>
         <a className="pular" href="#conteudo">
           Pular para o conteúdo
